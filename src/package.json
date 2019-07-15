@@ -22,12 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hherzl/SneakerBuyer.Mean.git"
+    "url": "https://github.com/jeannetteMukamana/Shopping-Sneakers.git"
   },
-  "author": "C. Herzl",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hherzl/SneakerBuyer.Mean/issues"
-  },
-  "homepage": "https://github.com/hherzl/SneakerBuyer.Mean#readme"
+  "author": "Jeannette MUKAMANA"
 }
