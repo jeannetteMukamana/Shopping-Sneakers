@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html ng-app="SneakerBuyer">
+    <head>
+        <title>Sneaker Buyer App</title>
+
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css"  href="node_modules/angularjs-toaster/toaster.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sneaker Buyer</h1>
+
+            <div ng-view></div>
+        </div>
+
+        <toaster-container></toaster-container>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+        <script src="node_modules/angularjs-toaster/toaster.js"></script>
+        <script src="app.js"></script>
+        <script src="services/SneakerBuyerService.js"></script>
+        <script src="controllers/HomeController.js"></script>
+        <script src="controllers/SneakerAddController.js"></script>
+        <script src="controllers/CartAddController.js"></script>
+        <script src="controllers/CartDisplayController.js"></script>
+        <script src="controllers/SneakerDetailsController.js"></script>
+        <script src="controllers/SneakerEditController.js"></script>
+        <script src="controllers/SneakerRemoveController.js"></script>
+    </body>
+</html>

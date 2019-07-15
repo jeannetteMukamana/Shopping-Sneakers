@@ -1,0 +1,31 @@
+<h2>Details</h2>
+
+<div>
+    <h4>Sneaker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>brandName</dt>
+        <dd>{{ vm.model.brandName }}</dd>
+
+        <dt>model</dt>
+        <dd>{{ vm.model.model }}</dd>
+
+        <dt>price</dt>
+        <dd>{{ vm.model.price }}</dd>
+
+        <dt>releaseDate</dt>
+        <dd>{{ vm.model.releaseDate | date:'dd/MM/yyyy' }}</dd>
+
+        <dt>Available size </dt>
+        <dd>{{ vm.model.size.size}}</dd>
+        <dt>Quantiy </dt>
+        <dd>{{ vm.model.size.quantity}}</dd>
+
+
+
+    </dl>
+</div>
+<hr />
+<p>
+    <a ng-click="vm.edit()">Edit</a> |   <a ng-click="vm.addToCat()">Add To Cart</a>|  <a ng-click="vm.cancel()">Cancel</a>
+</p>
