@@ -1,7 +1,8 @@
 var module = angular.module("SneakerBuyer", [
     "ngRoute",
     "ngAnimate",
-    "toaster"
+    "toaster",
+    "ngMaterial"
 ]);
 
 (function (app) {

@@ -1,31 +1,31 @@
-<h2>Details</h2>
-
-<div>
-    <h4>Sneaker</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>brandName</dt>
-        <dd>{{ vm.model.brandName }}</dd>
-
-        <dt>model</dt>
-        <dd>{{ vm.model.model }}</dd>
-
-        <dt>price</dt>
-        <dd>{{ vm.model.price }}</dd>
-
-        <dt>releaseDate</dt>
-        <dd>{{ vm.model.releaseDate | date:'dd/MM/yyyy' }}</dd>
-
-        <dt>Available size </dt>
-        <dd>{{ vm.model.size.size}}</dd>
-        <dt>Quantiy </dt>
-        <dd>{{ vm.model.size.quantity}}</dd>
-
-
-
-    </dl>
+<div ng-cloak layout-gt-sm="row" layout="column" style="width:2000px">
+    <div flex-gt-sm="50" flex>
+        <md-toolbar layout="row" class="md-hue-3">
+            <div class="md-toolbar-tools">
+                <span>Sneaker Details</span>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <md-list flex>
+                <md-list-item class="md-3-line">
+                    <img ng-src="images/Sneaker.png" class="md-avatar md-34" alt="{{Sneaker.brandName}}" />
+                    <div class="md-list-item-text" layout="column">
+                        <h3> <b>Brandand Name: </b> {{ vm.model.brandName }}</h3>
+                        <h3> <b> Model:</b> {{vm.model.model}} </h3>
+                        <h3> <b>Price: </b>{{vm.model.price }} </h3>
+                        <h3> <b>Available size : </b>{{ vm.model.size.size}} </h3>
+                        <h3> <b>Quantiy:</b>{{ vm.model.size.quantity}} </h3>
+                        <h3> <b>Release Date: </b> {{ vm.model.releaseDate | date:'dd/MM/yyyy'}} </h3>
+                    </div>
+                </md-list-item>
+                <hr />
+                <p>
+                    <a ng-click="vm.addToCat()">Add To Cart</a>| <a ng-click="vm.cancel()">Cancel</a>
+                </p>
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+                <md-divider></md-divider>
+            </md-list>
+        </md-content>
+    </div>
 </div>
-<hr />
-<p>
-    <a ng-click="vm.addToCat()">Add To Cart</a>|  <a ng-click="vm.cancel()">Cancel</a>
-</p>

@@ -9,7 +9,7 @@
         var vm = this;
         repository.addSneakerToCart($routeParams.id).then(function (result) {
             toaster.pop("success", "The Sneaker was added to cart successfully");
-                var userId = "12345"
+                var userId = "5d2c983cd9093f49e86a0094"
             $location.path("/cart/"+userId);
            
         });

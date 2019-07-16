@@ -1,33 +1,32 @@
-
-
-<h1>My shorpping cart</h1>
-<table class="table table-hover">
-    <tr>
-        
-        <th>User</th>
-        <th>brandName</th>
-        <th>model</th>
-        <th>size</th>
-        <th>price</th>
-        <th>Release Date</th>
-        <th></th>
-    </tr>
-    <tr ng-repeat="Sneaker in vm.Sneakers">
-       
-         <td>{{ Sneaker.ownerNames}}</td>
-        <td>{{ Sneaker.brandName }}</td>
-        <td>{{ Sneaker.model }}</td>
-        <td>{{ Sneaker.size.size}}</td>
-        <td>{{ Sneaker.price }}</td>
-        <td>{{ Sneaker.releaseDate | date:'dd/MM/yyyy' }}</td>
-        <td>
-            <div class="dropdown">
-                <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a ng-click="vm.remove(Sneaker._id)">Remove</a></li>
-                </ul>
+<div ng-cloak layout-gt-sm="row" layout="column" style="width:2000px">
+    <div flex-gt-sm="50" flex>
+        <md-toolbar layout="row" class="md-hue-3">
+            <div class="md-toolbar-tools">
+                <span>Sneakers in my shopping cart</span>
             </div>
-        </td>
-    </tr>
-</table>
+        </md-toolbar>
+        <md-content>
+            <md-list flex>
+                <md-list-item class="md-3-line" ng-repeat="Sneaker in vm.Sneakers  | orderBy : 'releaseDate'"
+                    ng-click="vm.details(Sneaker._id)">
+                    <img ng-src="images/Sneaker.png" class="md-avatar md-34" alt="{{Sneaker.brandName}}" />
+                    <div class="md-list-item-text" layout="column">
+                        <h3> Brandand Name: {{ Sneaker.brandName }}</h3>
+                        <h3>  Model:{{Sneaker.model}} </h3>
+                        <h3> Price: {{Sneaker.price }} </h3>
+                        <h3> Available size : {{ Sneaker.size.size}} </h3>
+                        <h3> Quantiy:{{ Sneaker.quantity}} </h3>
+                        <h3> Release Date: {{ Sneaker.releaseDate | date:'dd/MM/yyyy'}} </h3>
+                    </div>
+                    <p>
+                        <a ng-click="vm.remove(Sneaker._id)">Remove</a>| <a ng-click="vm.cancel()">Cancel</a>
+                    </p>
+                    <md-divider></md-divider>
+                    <md-divider></md-divider>
+                 
+                </md-list-item>
+
+            </md-list>
+        </md-content>
+    </div>
+</div>
